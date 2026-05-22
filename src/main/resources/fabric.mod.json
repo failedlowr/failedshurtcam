@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "failedshurtcam",
+	"version": "${version}",
+	"name": "FailedsHurtCam",
+	"description": "Disables the hurt camera screen shake when damaged.",
+	"authors": [
+		"failedlowr"
+	],
+	"contact": {
+		"homepage": "https://modrinth.com/project/failedshurtcam",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/failedshurtcam/icon.png",
+	"environment": "client",
+	"entrypoints": {
+		"client": [
+			"com.failed.client.FailedshurtcamClient"
+		],
+		"modmenu": [
+			"com.failed.integration.ModMenuIntegration"
+		]
+	},
+	"mixins": [
+		{
+			"config": "failedshurtcam.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.2",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
